@@ -5,6 +5,8 @@ var ready=1;
 var player=1;
 var p1scr=0;
 var p2scr=0;
+var cardboard=['nollas','eka','toka'];
+
 
 window.setInterval(function () {
     console.log("first: "+first+", second: "+second+", firstCell: "+firstCell+", ready: "+ready);
@@ -14,6 +16,8 @@ function ChangeColor(cellid) {
     if (ready===1 && firstCell!==cellid && document.getElementById(cellid).getAttribute("bgcolor")!=="green") {
 
         ready=0
+
+        console.log(cardboard.cells[cellid]);
 
         if (first==="") {
             first=document.getElementById(cellid).innerHTML;
